@@ -1,6 +1,7 @@
 .header {
     position: relative;
     margin: auto;
+    z-index: 1500;
 
     &__background {
         @include flexbox;
@@ -13,7 +14,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 110px;
+        margin-top: 85px;
 
         &::after {
             content: '';
@@ -35,6 +36,19 @@
 
         @include media('<md') {
             padding: 30px 15px;
+        }
+    }
+
+    &__title {
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+
+        &--smaller {
+            font-size: 1.2em;
+            text-transform: none;
+            letter-spacing: normal;
         }
     }
 
@@ -89,7 +103,6 @@
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: #082430;
         text-transform: uppercase;
         font-weight: 600;
         gap: 10px;
@@ -127,10 +140,25 @@
                 }
             }
         }
+        
+        &--scrolled {
+            .header__submenu {
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    &__topmenu {
+        position: relative;
+        z-index: 5;
+        background: #082430;
     }
 
     &__submenu {
         background-color: white;
+        transform: translateY(0);
+        overflow: hidden;
+        transition: .2s transform;
         
         &-list {
             display: flex;
@@ -155,4 +183,5 @@
             }
         }
     }
+    
 }

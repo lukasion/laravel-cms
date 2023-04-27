@@ -7,7 +7,7 @@
                 @include ('articles.buttons')
             </div>
             <div class="article__content">
-                <div class="pt-12 w-2/3">
+                <div class="pt-12 w-full">
                     <div class="my-4 leading-8">
                         {!! $article->content !!}
                     </div>

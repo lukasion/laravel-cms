@@ -15,11 +15,12 @@ class IndexController extends Controller
         
         return view('start', compact('article', 'articleOffer'));
     }
+
     public function contact(Request $request)
     {
         $article = Articles::find(10);
         
-        return view('articles.highlighted', compact('article'));
+        return view('articles.contact', compact('article'));
     }
 
     public function articles(Request $request)

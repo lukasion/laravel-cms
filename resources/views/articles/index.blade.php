@@ -12,7 +12,7 @@
                 <span>Wszystkie artykuły</span>
             </h2>
             <div class="flex md:flex-row flex-col">
-                <div class="articles basis-3/4">
+                <div class="articles">
                     @if (!empty($articles) && $articles->count() > 0)
                         @include ('articles.list', ['articles' => $articles])
                     @else

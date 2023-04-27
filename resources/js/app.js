@@ -17,6 +17,8 @@ import 'tinymce/plugins/code';
 import 'tinymce/plugins/table';
 
 import './categories';
+import './map';
+import './menu';
 
 require('./bootstrap');
 require('./tiny.js');

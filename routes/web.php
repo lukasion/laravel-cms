@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
 // Route::get('/artykuly', [IndexController::class, 'articles'])->name('articles');
-Route::get('/about-us', [IndexController::class, 'aboutMe'])->name('aboutMe');
-Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
+Route::get('/om-oss', [IndexController::class, 'aboutMe'])->name('aboutMe');
+Route::get('/kontakt', [IndexController::class, 'contact'])->name('contact');
 
 Route::prefix('zaloguj')->group(function () {
     Route::get('/', [UserController::class, 'loginForm'])->name('userLogin');

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
 
         @if (!empty($metatags))
             @isset ($metatags['title'])

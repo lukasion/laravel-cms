@@ -1,0 +1,14 @@
+.contact {
+    &__container {
+        display: flex;
+
+        @include media('<md') {
+            flex-direction: column;
+            gap: 45px;
+        }
+    }   
+
+    &__box {
+        flex: 1;
+    }
+}

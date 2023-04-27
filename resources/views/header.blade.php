@@ -1,13 +1,15 @@
 <div class="header">
     <div class="header__menu">
-        <div class="container row items-center justify-between">
-            <div class="header__logo">
-                <a href="/"><img src="/images/glimren_logo.svg" /></a>
-            </div>
-            <div class="header__menu-list">
-                <a href="/"><span>Homepage</span></a>
-                <a href="/about-us"><span>About us</span></a>
-                <a href="/contact"><span>Contact</span></a>
+        <div class="header__topmenu">
+            <div class="container row items-center justify-between">
+                <div class="header__logo">
+                    <a href="/"><img src="/images/glimren_logo.svg" /></a>
+                </div>
+                <div class="header__menu-list">
+                    <a href="/"><span>Forside</span></a>
+                    <a href="/om-oss"><span>Om oss</span></a>
+                    <a href="/kontakt"><span>Kontakt</span></a>
+                </div>
             </div>
         </div>
         <div class="header__submenu">
@@ -25,6 +27,8 @@
             </div>
         </div>
     </div>
+
+    {{ Route::currentRouteName() }}
     <div class="header__background">
         <div class="container header__top">
             <div class="header__top-container">

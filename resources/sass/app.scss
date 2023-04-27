@@ -1,0 +1,13 @@
+// beem
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'beem';
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+img {
+    max-width: 100%;
+    height: auto;
+}

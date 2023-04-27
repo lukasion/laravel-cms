@@ -1,0 +1,176 @@
+.icon {
+
+    &::before,
+    &::after {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+    }
+}
+
+.ico {
+    &--login {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f007";
+        }
+    }
+
+    &--register {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f023";
+        }
+    }
+
+    &--case {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f0b1";
+        }
+    }
+
+    &--map-marker {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f3c5";
+        }
+    }
+
+    &--search {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f002";
+        }
+    }
+
+    &--prev {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f100";
+        }
+    }
+
+    &--logout {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f2f5";
+        }
+    }
+
+    &--cross {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f654";
+        }
+    }
+
+    &--arrow-down {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f078";
+        }
+    }
+
+    &--arrow-down {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f078";
+        }
+    }
+
+    &--arrow-up {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f077";
+        }
+    }
+
+    &--edit {
+        @extend .icon;
+        margin-right: 5px;
+        font-size: 18px;
+        margin-left: 5px;
+
+        &::before {
+            content: "\f044";
+        }
+    }
+
+    &--zoom {
+        @extend .icon;
+        margin-right: 5px;
+
+        &::before {
+            content: "\f002";
+        }
+    }
+
+    &--exclamation-circle {
+        @extend .icon;
+        margin-right: 10px;
+        font-size: 18px;
+        position: relative;
+        top: 2px;
+
+        &::before {
+            content: "\f06a";
+        }
+    }
+
+    &--success {
+        @extend .icon;
+        color: #82c91e;
+        font-size: 100px;
+
+        &::before {
+            font-weight: 300;
+            content: "\f058";
+        }
+    }
+
+    &--failure {
+        @extend .icon;
+        color: red;
+        font-size: 100px;
+
+        &::before {
+            content: "\f05e";
+        }
+    }
+
+    &--doublearrow-right {
+        @extend .icon;
+        color: white !important;
+
+        &::before {
+            content: "\f101";
+        }
+    }
+}

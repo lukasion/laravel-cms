@@ -1,0 +1,18 @@
+@mixin border($width: unset, $style: none, $color: unset, $direction: all, $br: false) {
+    @if $direction == all {
+        border: $width $style $color;
+    } @else if $direction == horizontal {
+        border-top: $width $style $color;
+        border-bottom: $width $style $color;
+    } @else if $direction == vertical {
+        border-left: $width $style $color;
+        border-right: $width $style $color;
+    } @else {
+        border-#{$direction}: $width $style $color;
+    }
+
+    @if $br {border-radius: $br}
+}
+
+// example
+// @include border(1px, solid, #ccc, 'top');

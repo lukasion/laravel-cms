@@ -1,0 +1,15 @@
+.form {
+    &__input {
+        border: 1px solid #eee;
+        border-radius: 3px;
+    }
+
+    &__button {
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: $dark;
+        color: white;
+        border: none;
+        letter-spacing: 0.1em;
+    }
+}

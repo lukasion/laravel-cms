@@ -1,0 +1,12 @@
+.newsletter {
+    @include flexbox;
+
+    &__title {
+        margin: 0 15px;
+        padding: 5px;
+        font-weight: 600;
+        font-size: 21px;
+        text-transform: uppercase;
+        flex: 1;
+    }
+}

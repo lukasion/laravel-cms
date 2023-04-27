@@ -1,0 +1,38 @@
+.alert {
+    position: fixed;
+    width: 350px;
+    right: 0;
+    transition: transform .5s;
+    bottom: 25%;
+    transform: translateX(350px);
+
+    &--warning {
+        @extend .alert;
+        background-color: #ffb3b3;
+        border-color: #ffe0e0;
+    }
+
+    &__header {
+        font-weight: bold;
+    }
+
+    &.active {
+        -webkit-animation: slideLeft 3.0s 0.3s 1 ease forwards;
+        -moz-animation: slideLeft 3.0s 0.3s 1 ease forwards;
+    }
+
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(350px);
+        }
+
+        10%,
+        90% {
+            transform: translateX(0px);
+        }
+
+        100% {
+            transform: translateX(350px);
+        }
+    }
+}

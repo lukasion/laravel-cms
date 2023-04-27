@@ -1,0 +1,31 @@
+.border {
+    &__double-bottom {
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background-color: black;;
+        }
+
+        &::before {
+            width: 40px;
+            height: 1px;
+            bottom: -15px;
+        }
+
+        &--left {
+            &::after,
+            &::before {
+                margin: 0;
+            }
+        }
+    }
+}

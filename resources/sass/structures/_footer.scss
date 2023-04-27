@@ -1,0 +1,15 @@
+.footer {
+    &__container {
+        background-color: white;
+        color: #333;
+        min-height: 30vh;
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottom {
+        background-color: #131313;
+        color: white;
+        padding: 25px 0;
+    }
+}

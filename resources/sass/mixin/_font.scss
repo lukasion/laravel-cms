@@ -1,0 +1,8 @@
+@mixin font($size: false, $color: false, $weight: false,  $lh: false, $ts: false) {
+    //font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    @if $size { font-size: $size; }
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+    @if $ts { text-shadow: $ts; }
+}

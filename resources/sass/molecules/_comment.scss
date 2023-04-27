@@ -1,0 +1,23 @@
+.comment {
+
+    &__list {
+        margin-top: 35px;
+    }
+
+    &__row {
+        position: relative;
+        background-color: white;
+        padding: 8px 15px;
+        font-size: 0.8rem;
+
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+
+    &__delete {
+        position: absolute;
+        top: 3px;
+        right: 8px;
+    }
+}

@@ -1,0 +1,30 @@
+.category {
+    &__menu {
+        display: flex;
+        gap: 2px;
+        flex-wrap: wrap;
+
+        li {
+            a {
+                display: block;
+                padding: 10px 25px;
+                color: black;
+                background: white;
+                transition: 0.3s ease background;
+
+                &:hover {
+                    background: rgb(241 245 249 / 1);
+                }
+            }
+        }
+    }
+
+    &__link {
+        &--more {
+
+            &:not(.active) {
+                display: none;
+            }
+        }
+    }
+}

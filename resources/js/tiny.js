@@ -1,0 +1,17 @@
+tinymce.init({
+    selector: '#tiny',
+    plugins: 'paste link code image table',
+    menubar: 'file edit view insert format tools table help responsivefilemanager',
+    toolbar1: 'undo redo | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+    toolbar2: 'fontselect fontsizeselect formatselect | media',
+    toolbar3: 'table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol',
+    external_filemanager_path: "/js/file-manager_secure/",
+	filemanager_title: "Responsive Filemanager",
+    paste_data_images: false,
+    content_css: '/css/app.css',
+    image_advtab: true,
+	external_plugins: { "filemanager" : "/js/file-manager_secure/plugin.min.js"},
+    image_dimensions: false,
+    relative_urls : false,
+    language: 'pl',
+});

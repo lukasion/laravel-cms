@@ -1,0 +1,37 @@
+.offer {
+
+    &__container {
+        background-color: #334155;
+        color: white;
+        padding: 45px 0;
+    }
+
+    &__boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    &__box {
+        flex: 1;
+        background-color: #43546d;
+        padding: 50px 35px;
+        text-align: center;
+        
+        h3 {
+            font-size: 400;
+            font-size: 24px;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+    }
+}

@@ -1110,10 +1110,6 @@ video {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-.my-12{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1141,11 +1137,11 @@ video {
 .mt-12{
   margin-top: 3rem;
 }
-.mt-6{
-  margin-top: 1.5rem;
-}
 .mt-8{
   margin-top: 2rem;
+}
+.mt-6{
+  margin-top: 1.5rem;
 }
 .mb-12{
   margin-bottom: 3rem;
@@ -1191,9 +1187,6 @@ video {
 }
 .w-full{
   width: 100%;
-}
-.w-2\/3{
-  width: 66.666667%;
 }
 .w-5{
   width: 1.25rem;
@@ -2020,6 +2013,10 @@ body {
     flex-direction: column;
   }
 }
+.article__start {
+  position: relative;
+  margin-top: 45px;
+}
 .article__container {
   flex: 2;
   padding: 3rem 0rem;
@@ -2110,9 +2107,23 @@ body {
 }
 
 .offer__container {
-  background-color: #334155;
+  background-color: #00579e;
   color: white;
   padding: 45px 0;
+  position: relative;
+}
+.offer__container::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 0;
+  right: 0;
+  height: 150px;
+  transform: rotate(180deg);
+  background: url("/images/fala.svg");
+  background-size: cover;
+  pointer-events: none;
+  z-index: 5549;
 }
 .offer__boxes {
   display: flex;
@@ -2122,7 +2133,7 @@ body {
 }
 .offer__box {
   flex: 1;
-  background-color: #43546d;
+  background-color: #ffffff;
   padding: 50px 35px;
   text-align: center;
 }
@@ -2181,25 +2192,32 @@ body {
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
   align-items: flex-start;
-  background: url("/images/header_bg.jpg");
-  background-size: cover;
-  background-position-y: -170px;
+  background: url("/images/header_bg.png");
+  background-size: 71%;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 85px;
+  margin-top: 95px;
+  padding-top: 165px;
+  padding-bottom: 80px;
 }
 .header__background::after {
   content: "";
-  background-color: #082430;
   position: absolute;
-  inset: 0;
-  opacity: 0.6;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: url("/images/fala.svg");
+  background-size: cover;
+  pointer-events: none;
 }
 @media (min-width: 1025px) {
   .header__background {
-    min-height: 70vh;
+    min-height: 400px;
   }
 }
 @media (min-width: 768px) {
@@ -2212,11 +2230,18 @@ body {
     padding: 30px 15px;
   }
 }
+.header__titles {
+  display: flex;
+  flex-direction: column;
+  list-style-type: disc;
+  align-items: center;
+}
 .header__title {
   font-size: 2em;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  color: #0881b4;
 }
 .header__title--smaller {
   font-size: 1.2em;
@@ -2295,7 +2320,7 @@ body {
   margin: 0 20px;
 }
 .header__menu a:not(:last-child) {
-  border-right: 1px solid #2b3b44;
+  border-right: 1px solid #00437a;
 }
 .header__menu a:hover span {
   border-bottom: 2px solid white;
@@ -2306,12 +2331,9 @@ body {
 .header__topmenu {
   position: relative;
   z-index: 5;
-  background: #082430;
+  background-color: #00579e;
 }
 .header__submenu {
-  background-color: white;
-  transform: translateY(0);
-  overflow: hidden;
   transition: 0.2s transform;
 }
 .header__submenu-list {
@@ -2385,6 +2407,16 @@ body {
 
 .map__container {
   min-height: 400px;
+}
+
+.login__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5555;
+  background-color: #eee;
+  margin: 0;
 }
 
 img {

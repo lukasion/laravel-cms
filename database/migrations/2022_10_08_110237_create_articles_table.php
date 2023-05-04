@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->mediumText('content');
 
             $table->foreignIdFor(User::class);

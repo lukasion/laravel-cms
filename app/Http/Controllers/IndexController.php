@@ -16,6 +16,13 @@ class IndexController extends Controller
         return view('start', compact('article', 'articleOffer'));
     }
 
+    public function aboutme(Request $request)
+    {
+        $article = Articles::find(108);
+        
+        return view('articles.about', compact('article'));
+    }
+
     public function contact(Request $request)
     {
         $article = Articles::find(10);

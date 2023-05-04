@@ -23,10 +23,6 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}?ver={{ time() }}" />
     </head>
     <body>
-        @if (Auth::check())
-            @include ('user.navbar')
-        @endif
-
         @include ('menu')
 
         @if (!isset($withoutHeader))

@@ -135,9 +135,7 @@ class ArticleController extends Controller
                 $article->name = $name;
             }
 
-            if ($content != null) {
-                $article->content  = $content;
-            }
+            $article->content  = $content;
 
             if (!empty($request->category_id)) {
                 $article->category_id  = $request->category_id;

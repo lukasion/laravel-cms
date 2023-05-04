@@ -1,7 +1,7 @@
 @extends ('index')
 
 @section ('content')
-    <div class="py-3 mt-0 pb-10">
+    <div class="py-3 mt-12 pb-10">
         <div class="container">
             <h1 class="text-center text-xl" style="margin: 65px 0 0;">
                 @isset ($article)

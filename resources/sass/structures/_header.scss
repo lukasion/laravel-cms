@@ -7,32 +7,16 @@
         @include flexbox;
         @include flex-direction(column);
         @include align-items(flex-start);
-        background: url('/images/header_bg.png');
-        background-size: 71%;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-color: rgba(195,233,243,1);
         color: $white;
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 95px;
-        padding-top: 165px;
-        padding-bottom: 80px;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 150px;
-            background: url('/images/fala.svg');
-            background-size: cover;
-            pointer-events: none;
-        }
+        margin-top: 125px;
+        padding: 80px 0;
 
         @include media('>lg') {
-            min-height: 400px;
+            min-height: 650px;
         }
     }
 
@@ -54,11 +38,10 @@
     }
 
     &__title {
-        font-size: 2em;
+        font-size: 2.5em;
         font-weight: 600;
-        text-transform: uppercase;
         letter-spacing: .05em;
-        color: #0881b4;
+        color: #00437a;
 
         &--smaller {
             font-size: 1.2em;
@@ -98,7 +81,7 @@
     }
 
     &__image {
-        flex: 2;
+        flex: 1;
         background: url('/images/bg-top.png');
         background-size: cover;
         transform: scaleX(-1);
@@ -106,7 +89,18 @@
         height: 450px;
     }
 
+    &__text {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         img {
             width: 100px;
             margin: 15px 0;
@@ -135,7 +129,7 @@
 
         a {
             display: block;
-            color: white;
+            color: black;
 
             span {
                 border-bottom: 2px solid transparent;
@@ -145,13 +139,9 @@
                 margin: 0 20px;
             }
 
-            &:not(:last-child) {
-                border-right: 1px solid #00437a;
-            }
-
             &:hover {
                 span {
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid black;
                 }
             }
         }
@@ -163,10 +153,55 @@
         }
     }
 
+    &__item {
+        width: 180px;
+        text-align: center;
+
+        @include media('<1024px') {
+            width: 130px;
+
+            span {
+                margin: 0 10px !important;
+            }
+        }
+
+        span {
+            color: #333;
+            font-weight: 400;
+        }
+
+        &--disabled {
+            pointer-events: none;
+        }
+    }
+
     &__topmenu {
         position: relative;
         z-index: 5;
-        background-color: #00579e;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        & > .row {
+            min-height: 125px;
+        }
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__button {
+        display: inline-block;
+        color: #00437a;
+        padding: 12px 60px;
+        border: 2px solid #00437a;   
+        font-weight: 600;
+        transition: .2s background-color, .2s color;
+
+        &:hover {
+            background-color: #00437a;
+            color: white;
+        }
     }
 
     &__submenu {

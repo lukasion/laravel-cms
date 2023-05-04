@@ -1,24 +1,10 @@
 .offer {
 
     &__container {
-        background-color: #00579e;
-        color: white;
+        background-color: #fff;
+        color: black;
         padding: 45px 0;
         position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -150px;
-            left: 0;
-            right: 0;
-            height: 150px;
-            transform: rotate(180deg);
-            background: url('/images/fala.svg');
-            background-size: cover;
-            pointer-events: none;
-            z-index: 5549;
-        }
     }
 
     &__boxes {
@@ -30,6 +16,7 @@
 
     &__box {
         flex: 1;
+        border: 1px solid #00437a;
         background-color: #ffffff;
         padding: 50px 35px;
         text-align: center;

@@ -50,6 +50,9 @@
     }
     
     &__burger {
+        position: relative;
+        top: 2px;
+        color: black;
     }
 
     &__mobile {
@@ -59,15 +62,22 @@
         overflow: hidden;
 
         &-icon {
-            background-color: #5e5067;
+            background-color: #fff;
             position: fixed;
-            z-index: 100;
+            z-index: 755555;
             left: 0;
             right: 0;
             top: 0;
             padding: 15px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
+            align-items: center;
+
+            .header__logo {
+                img {
+                    margin: 0;
+               }
+            }
 
             @include media ('>md') {
                 display: none;
@@ -80,17 +90,21 @@
             flex-direction: column;
             background: #fff;
             color: black;
-            margin-top: 65px;
+            margin-top: 98px;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 100;
+            z-index: 655665;
             overflow: hidden;
             transition: 0.3s ease max-height;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
             li {
-                padding: 15px 10px;
+                a {
+                    display: block;
+                    padding: 15px 25px;
+                }
 
                 &:not(:first-child) {
                     border-top: 1px #b4a4be solid;

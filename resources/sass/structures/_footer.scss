@@ -5,6 +5,12 @@
         min-height: 30vh;
         display: flex;
         align-items: center;
+
+        .article__container {
+            @include media ('<md') {
+                padding: 0;
+            }
+        }
     }
 
     &__bottom {

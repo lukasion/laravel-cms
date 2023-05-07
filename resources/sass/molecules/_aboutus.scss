@@ -1,0 +1,27 @@
+.aboutus {
+    &__container {
+        min-height: 400px;
+        position: relative;
+        background: linear-gradient(0deg, rgba(196,200,205,1) 0%, rgba(211,219,228,1) 100%);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(20,55,76,1);
+        }
+
+        .header__button {
+            border-color: white;
+            color: white;
+
+            &:hover {
+                background-color: white;
+                color: rgb(20,55,76);
+            }
+        }
+    }
+}

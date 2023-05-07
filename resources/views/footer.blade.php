@@ -38,7 +38,7 @@
     </div>
 
     <div class="footer__container">
-    <div class="container">
+        <div class="container">
             <div class="row my-16 gap-2 md:gap-12 flex-col md:flex-row">
                 <div class="col">
                     @include('articles.show', ['article' => $footerArticle])

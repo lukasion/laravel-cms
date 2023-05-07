@@ -12,7 +12,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        margin-top: 125px;
+        margin-top: 100px;
         padding: 80px 0;
 
         @include media('>lg') {
@@ -205,7 +205,7 @@
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         & > .row {
-            min-height: 125px;
+            min-height: 100px;
         }
     }
 

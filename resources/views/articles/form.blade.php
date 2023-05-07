@@ -83,7 +83,7 @@
     @if (!empty($article) && $article->id == 104)
         @php
             if (in_array($article->id, [104])) {
-                $bg = '#334155';
+                $bg = '#fff';
             }
         @endphp
 

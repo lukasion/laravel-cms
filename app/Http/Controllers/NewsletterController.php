@@ -28,7 +28,7 @@ class NewsletterController extends Controller
             // $newsletterObj->save();
 
             return redirect(route('index'))
-                ->with('info', 'Dziękujemy za zapis do newslettera. <br /><span style="font-weight: 600;">Prośba o potwierdzenie została wysłana na adres e-mail.</span>');
+                ->with('info', 'Takk for at du abonnerer på nyhetsbrevet. <br /><span style="font-weight: 600;">En bekreftelsesforespørsel er sendt til din e-postadresse.</span>');
         }
     }
 
@@ -60,7 +60,7 @@ class NewsletterController extends Controller
 
             if ($newsletterObj->save()) {
                 return redirect(route('newsletterList'))
-                    ->with('info', 'Kampania została poprawnie utworzona');
+                    ->with('info', 'Kampanjen er opprettet.');
             }
         }
     }
@@ -79,7 +79,7 @@ class NewsletterController extends Controller
             
             if ($newsletterObj->save()) {
                 return redirect(route('newsletterList'))
-                    ->with('info', 'Kampania została poprawnie edytowana.');
+                    ->with('info', 'Kampanjen er redigert på riktig måte.');
             }
         }
     }

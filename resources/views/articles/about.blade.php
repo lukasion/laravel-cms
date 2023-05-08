@@ -1,11 +1,13 @@
 @extends ('index')
 
 @section ('content')
-    <div class="mt-0 pb-10">
+    <div class="article__highlighted mt-0 pb-10">
         <div class="container">
-            <div class="article__header mt-8">
-                @include ('articles.buttons')
-            </div>
+            @if (Auth::check())
+                <div class="article__header mt-8">
+                    @include ('articles.buttons')
+                </div>
+            @endif
 
             <div class="article__content">
                 <div class="pt-12 w-full">
@@ -17,4 +19,3 @@
         </div>
     </div>
 @endsection
-

@@ -24,9 +24,17 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 // Route::get('/artykuly', [IndexController::class, 'articles'])->name('articles');
 Route::get('/om-oss', [IndexController::class, 'aboutMe'])->name('aboutMe');
+Route::get('/tilbudet', [IndexController::class, 'offer'])->name('offer');
 Route::get('/kontakt', [IndexController::class, 'contact'])->name('contact');
 
 Route::prefix('zaloguj')->group(function () {
+    Route::get('/', [UserController::class, 'loginForm'])->name('userLogin');
+    Route::post('/', [UserController::class, 'login']);
+
+    Route::post('/logout', [UserController::class, 'logout'])->name('userLogout');
+});
+
+Route::prefix('panel')->group(function () {
     Route::get('/', [UserController::class, 'loginForm'])->name('userLogin');
     Route::post('/', [UserController::class, 'login']);
 

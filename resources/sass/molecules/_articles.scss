@@ -5,6 +5,12 @@
 }
 
 .article {
+
+    &__highlighted {
+        @include media ('>md') {
+            margin-top: 96px;
+        }
+    }
     &__content {
         display: flex;
 

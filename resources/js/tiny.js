@@ -8,11 +8,11 @@ tinymce.init({
     external_filemanager_path: "/js/file-manager_secure/",
 	filemanager_title: "Responsive Filemanager",
     paste_data_images: false,
-    content_css: '/css/app.css',
+    content_css: '/css/app.css?ver=2023v2',
     image_advtab: true,
 	external_plugins: { "filemanager" : "/js/file-manager_secure/plugin.min.js"},
     extended_valid_elements: "svg[*],defs[*],pattern[*],desc[*],metadata[*],g[*],mask[*],path[*],line[*],marker[*],rect[*],circle[*],ellipse[*],polygon[*],polyline[*],linearGradient[*],radialGradient[*],stop[*],image[*],view[*],text[*],textPath[*],title[*],tspan[*],glyph[*],symbol[*],switch[*],use[*]",
     image_dimensions: false,
     relative_urls : false,
-    language: 'pl',
+    language: 'nb_NO',
 });

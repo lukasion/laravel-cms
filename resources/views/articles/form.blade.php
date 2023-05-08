@@ -5,9 +5,9 @@
         <div class="container">
             <h1 class="text-center text-xl" style="margin: 65px 0 0;">
                 @isset ($article)
-                    <strong>Edytowanie artykułu:</strong> {{ $article->name }} (ID: {{ $article->id }})
+                    <strong>Redigering av en artikkel:</strong> {{ $article->name }} (ID: {{ $article->id }})
                 @else
-                    <strong>Tworzenie artykułu</strong>
+                    <strong>Opprette en artikkel</strong>
                 @endisset
             </h1>
 
@@ -15,13 +15,13 @@
                 @csrf
                 <div class="m-auto w-full mb-12 md:mb-0 mt-8">
                     <div>
-                        <label for="name">Nazwa artykułu *:</label>
+                        <label for="name">Artikkelnavn*:</label>
                         <input
                             type="text"
                             name="name"
                             class="form-control block w-full px-4 py-2 text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="name"
-                            placeholder="Nazwa artykułu *"
+                            placeholder="Artikkelnavn *"
                             required
                             value="@isset ($article){{ $article->name }}@endisset" />
                     </div>
@@ -65,13 +65,13 @@
                         @php
                             $width = !empty($article) && in_array($article->id, [11, 12, 13]) ? '435px' : '100%';
                         @endphp
-                        <label for="tiny">Treść artykułu:</label>
+                        <label for="tiny">Innholdet i artikkelen:</label>
                         <textarea rows="35" name="content" id="tiny" style="width: {{ $width }}">@isset ($article){{ $article->content }}@endisset</textarea>
                     </div>
 
                     <div class="text-center">
-                        <input type="submit" class="bg-blue-600 hover:bg-blue-500 cursor-pointer transition-all text-white font-semibold py-2 px-4 rounded" value="Zapisz artykuł" style="margin-top: 15px;" />
-                        <a href="{{ route('index') }}" class="bg-gray-600 hover:bg-gray-500 cursor-pointer transition-all text-white font-semibold py-2 px-4 rounded" style="margin-top: 15px;">Powrót</a>
+                        <input type="submit" class="bg-blue-600 hover:bg-blue-500 cursor-pointer transition-all text-white font-semibold py-2 px-4 rounded" value="Lagre artikkelen" style="margin-top: 15px;" />
+                        <a href="{{ route('index') }}" class="bg-gray-600 hover:bg-gray-500 cursor-pointer transition-all text-white font-semibold py-2 px-4 rounded" style="margin-top: 15px;">Komme tilbake</a>
                     </div>
                 </div>
 
@@ -80,17 +80,22 @@
     </div>
 
     <!-- Background for specify articles -->
-    @if (!empty($article) && $article->id == 104)
+    @if (!empty($article))
         @php
+            $bg = '';
             if (in_array($article->id, [104])) {
                 $bg = '#fff';
+            } elseif (in_array($article->id, [15])) {
+                $bg = '#14374c';
             }
         @endphp
 
-        <script defer>
-            window.onload = function() {
-                document.getElementById('tiny_ifr').style.background = '{{ $bg }}';
-            };
-        </script>
+        @if (!empty($bg)) 
+            <script defer>
+                window.onload = function() {
+                    document.getElementById('tiny_ifr').style.background = '{{ $bg }}';
+                };
+            </script>
+        @endif
     @endif
 @endsection

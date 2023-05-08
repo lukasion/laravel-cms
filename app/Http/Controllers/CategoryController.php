@@ -63,7 +63,7 @@ class CategoryController extends Controller
 
             if ($category->save()) {
                 return redirect()->route('categoryList')
-                    ->with('info', 'Pomyślnie edytowano kategorię.');
+                    ->with('info', 'Kategori ble redigert.');
             }
         }
     }
@@ -77,7 +77,7 @@ class CategoryController extends Controller
             return redirect()->route('categoryList');
         } catch (\Exception $e) {
             return redirect()->route('categoryList')
-                ->with('warning', 'Nie powiodło się usuwanie kategorii.');
+                ->with('warning', 'Kunne ikke slette kategorier.');
         }
     }
 }

@@ -85,7 +85,7 @@ class ArticleController extends Controller
                         
                         if ($commentObj->save()) {
                             return redirect(route('articleShow', ['articleFriendlyName' => $article->friendly_name]))
-                                ->with('info', 'Pomyślnie dodano komentarz pod artykułem.');
+                                ->with('info', 'Du har lagt til en kommentar under artikkelen.');
                         }
                     } else {
                         $wrongToken = true;
@@ -151,10 +151,10 @@ class ArticleController extends Controller
 
                 if ($article->highlighted == 1) {
                     return redirect($redirect)
-                        ->with('info', 'Pomyślnie zapisano artykuł.');
+                        ->with('info', 'Artikkelen er lagret.');
                 } else {
                     return redirect($redirect)
-                        ->with('info', 'Pomyślnie zapisano artykuł.');
+                        ->with('info', 'Artikkelen er lagret.');
                 }
             }
         }
@@ -177,10 +177,10 @@ class ArticleController extends Controller
                         $article->delete();
 
                         return redirect(route('articles'))
-                            ->with('info', 'Pomyślnie usunięto artykuł.');
+                            ->with('info', 'Artikkelen ble slettet.');
                     } catch (\Exception $e) {
                         return redirect(route('articles'))
-                            ->with('warning', 'Wystąpił błąd podczas usuwania artykułu.');
+                            ->with('warning', 'Det oppstod en feil under sletting av artikkelen.');
                     }
                 }
             }
@@ -227,7 +227,7 @@ class ArticleController extends Controller
 
             if ($article->save()) {
                 return redirect(route('articleShow', ['articleFriendlyName' => $article->friendly_name]))
-                    ->with('info', 'Pomyślnie utworzono artykuł.');
+                    ->with('info', 'Artikkelen ble opprettet.');
             }
         }
 

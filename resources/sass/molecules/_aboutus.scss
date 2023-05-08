@@ -7,20 +7,18 @@
         &::after {
             content: '';
             position: absolute;
-            width: 60%;
+            width: 63%;
             top: 0;
             bottom: 0;
             right: 0;
             background-color: rgba(20,55,76,1);
-        }
 
-        .header__button {
-            border-color: white;
-            color: white;
+            @include media ('<xl') {
+                width: 55%;
+            }
 
-            &:hover {
-                background-color: white;
-                color: rgb(20,55,76);
+            @include media ('<md') {
+                width: 100%;
             }
         }
     }

@@ -30,7 +30,7 @@ class UserController extends Controller
 
         if ($user && Auth::attempt(['email' => $user->email, 'password' => $request->password])) {
             return redirect(route('index'))
-                ->with('info', 'Pomyślnie zalogowano do systemu.');
+                ->with('info', 'Du har logget på systemet.');
         } else {
             return view('user.login', compact('login'));
         }
@@ -42,7 +42,7 @@ class UserController extends Controller
             Auth::logout();
             
             return redirect(route('index'))
-                ->with('info', 'Pomyślnie wylogowano z systemu.');
+                ->with('info', 'Du har logget ut av systemet.');
         } else {
             $user = Auth::user();
             

@@ -5,7 +5,7 @@
                 <a href="/" class="header__item"><span>Forside</span></a>
                 <a href="/tilbudet" class="header__item"><span>Tilbudet</span></a>
                 <div class="header__logo header__item">
-                    <a href="/"><img src="/images/glimren_logo.svg" /></a>
+                    <a href="/"><img src="/images/glimren_logo-black.svg" /></a>
                 </div>
                 <a href="/om-oss" class="header__item"><span>Om oss</span></a>
                 <a href="/kontakt" class="header__item"><span>Kontakt</span></a>
@@ -24,7 +24,5 @@
                 </div>
             </div>
         </div>
-    @else
-        <div style="height: 70px;"></div>
     @endif
 </div>

@@ -20,7 +20,7 @@ class CommentController extends Controller
                 $comment->delete();
 
                 return redirect(route('articleShow', ['articleFriendlyName' => $article->friendly_name]))
-                    ->with('info', 'Pomyślnie usunięto komentarz w artykule.');
+                    ->with('info', 'Du har fjernet en kommentar fra en artikkel.');
                     
             } catch (\Exception $e) {
                 dd($e);
@@ -29,7 +29,7 @@ class CommentController extends Controller
             }
         } else {
             return redirect(route('index'))
-                ->with('warning', 'Wybrany komentarz już nie istnieje!');
+                ->with('warning', 'Den valgte kommentaren eksisterer ikke lenger!');
         }
     }
 }

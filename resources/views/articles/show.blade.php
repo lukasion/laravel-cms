@@ -9,9 +9,7 @@
         </div>
         <div class="article__content">
             <div class="article__container">
-                <div class="my-4">
-                    {!! $article->content !!}
-                </div>
+                {!! $article->content !!}
             </div>
         </div>
     @endif

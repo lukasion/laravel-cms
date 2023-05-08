@@ -2,6 +2,11 @@
     @include flexbox;
     color: $white;
 
+    @include media ('<md') {
+        height: 100px;
+    }
+
+
     &--smaller {
         padding: 10px 13px;
     }
@@ -61,13 +66,17 @@
         flex: 1;
         overflow: hidden;
 
-        &-icon {
+        &-container {
             background-color: #fff;
             position: fixed;
-            z-index: 755555;
+            z-index: 7555;
             left: 0;
             right: 0;
             top: 0;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        &-icon {
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -90,15 +99,8 @@
             flex-direction: column;
             background: #fff;
             color: black;
-            margin-top: 98px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 655665;
             overflow: hidden;
             transition: 0.3s ease max-height;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
             li {
                 a {
